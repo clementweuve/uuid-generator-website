@@ -1,0 +1,24 @@
+{% extends "base.j2" %}
+
+{%block body%}
+<div class=""container>
+    <div class="UUID">
+        <h1 class="TitlePage">Online UUID Multiple generator</h1>
+        <form class="Form_UUID" action="{{ url_for('generate') }}" method="post" enctype="multipart/form-data" accept-charset="utf-8">
+            <label>Select the UUID version:</label><br>
+            <select name="version_select" id="version_select">
+                <option value=True>UUID V4</option>
+                <option value=False>UUID V1</option>
+            </select><br>
+            <label>Number of UUID:</label><br>
+            <input type="number" min="1" max="99" value="1" name="number" id="number"><br>
+            <input type="submit">
+        </form>
+    </div>
+    <div class="infos">
+        <h3>How does it work ?</h3>
+        <p>Enter wich version of UUID do you want, and enter the amount of UUID that you need.<br> We will make a text file with your UUIDs. It's free and fast!<br> Your file will be automatically deleted after 2 minutes from our server.</p>
+    </div>
+</div>
+
+{%endblock%}

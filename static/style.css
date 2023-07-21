@@ -1,0 +1,65 @@
+*{
+    font-style: normal;
+}
+
+main{
+    margin:auto; 
+}
+
+footer{
+  bottom: 0;
+  background: #f0f0f0;
+  height: 100px;
+  margin-top: 15%;
+  padding-top: 20px;
+}
+
+footer *{
+  text-align: center;
+}
+
+.container {
+  font-size: 24px;
+  margin: 25px;
+  width: 350px;
+  height: 200px;
+  }
+  
+  .UUID {
+    /* Center horizontally*/
+    text-align: center;
+    display:block;
+    margin:auto; 
+  }
+
+.UUID_Link{
+  font-size: 200%;
+}
+
+.navbar-brand{
+  padding-left: 10px;
+}
+
+.TitlePage{
+  font-size: 4rem;
+}
+
+.infos{
+  max-width: 40%;
+  border-width:2px;
+  border-style:solid;
+  border-color:black;
+  margin:auto; 
+  display:block;
+  margin-top: 10%;
+
+}
+
+form *{
+  margin-top: 10px;
+  min-width: 10%;
+}
+
+form label {
+  text-align: left;
+}

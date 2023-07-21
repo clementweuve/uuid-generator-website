@@ -1,0 +1,38 @@
+{% extends "base.j2" %}
+
+{%block body%}
+<div class=""container>
+    <div class="UUID">
+        <h1 class="TitlePage">Online UUID V{{version}} generator</h1>
+        <!-- UUID generated -->
+        <h1 class="UUID" id="copyme">{{UUID}}</h1>
+        <!-- "Copy" button -->
+        <a href="#" onClick="clip_div('copyme')" class="UUID_Link">Copy</a>
+        <!-- "Refresh" button -->
+        <a href={{refreshlink}} class="UUID_Link"><p>Refresh</p></a>
+        <!-- Open UUID file generator -->
+        <a href="/file-generator" class="UUID_Link"><p>Generate more UUIDs</p></a>
+    </div>
+    <div class="infos">
+        <h3>What is UUID v{{version}} ?</h3>
+        <p>{{explanation}}</p>
+    </div>
+</div>
+<!-- Script permettant de copier l'UUID -->
+<script>
+function clip_text(a_string){
+    var input = document.createElement('input')
+    input.id="__copyText__";
+    input.value = a_string; // OOPS! document.getElementById(divId).innerText;
+    document.body.appendChild(input);
+    input.select();
+    document.execCommand("copy");
+    var txt = input.value
+    input.remove()
+    console.log("OK COPIED: '"+txt+"'")
+}
+function clip_div(divId){
+   return clip_text(document.getElementById(divId).innerText)
+}
+</script>
+{%endblock%}
