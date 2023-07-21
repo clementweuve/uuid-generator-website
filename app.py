@@ -1,6 +1,6 @@
+import time
 from flask import Flask, render_template, request, send_file
 import UUID_service as service
-import time
 import filemanager
 app = Flask(__name__)
 
