@@ -43,7 +43,7 @@ def generate():
     date = time.strftime("%Y%m%d-%H%M%S")
     filename=f"{date}_UUID_List.txt"
     uuid_list = service.loop_uuidgeneration(uuid_version, number_uuid)
-    filemanager.create_UUID_file(filepath=f"static/UUID_files/{filename}", UUID_L=uuid_list)
+    filemanager.create_uuid_file(filepath=f"static/UUID_files/{filename}", UUID_L=uuid_list)
     return send_file(f"static/UUID_files/{filename}", download_name=f'{filename}',as_attachment=True)
 
 
