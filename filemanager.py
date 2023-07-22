@@ -26,6 +26,8 @@ def create_uuid_file(filepath:str, uuid_list:list):
 
     Return: nothing
     """
+    if not os.path.isdir("static/uuid_files"):
+        os.mkdir("static/uuid_files")
     with open(filepath, 'w', encoding='utf-8') as file:
         writer = csv.writer(file)
         writer.writerow(["uuid",])
