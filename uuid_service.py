@@ -3,7 +3,7 @@ import uuid
 import time
 import random
 
-def uuid_generation(version4:bool):
+def uuid_generation(v4:bool):
     """Generate UUID
     
     Keyword arguments:
@@ -11,12 +11,12 @@ def uuid_generation(version4:bool):
 
     Return: UUID str
     """
-    if version4 is True:
+    if v4 is True:
         return(str(uuid.uuid4()))
     return(str(uuid.uuid1()))
 
 
-def loop_uuidgeneration(version4:bool, n_uuid:int):
+def loop_uuidgeneration(v4:bool, n_uuid:int):
     """Generate a list of uuid
     
     Keyword arguments:
@@ -27,6 +27,6 @@ def loop_uuidgeneration(version4:bool, n_uuid:int):
     """
     uuid_list=[]
     for _ in range(n_uuid):
-        uuid_list.append(uuid_generation(version4))
+        uuid_list.append(uuid_generation(v4))
         time.sleep(random.uniform(0.01, 0.07))
     return uuid_list
